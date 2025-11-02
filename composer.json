@@ -1,0 +1,16 @@
+{
+    "name": "willian/dev",
+    "description": "Dev_evolution_tutoriais",
+    "autoload": {
+        "psr-4": {
+            "Willian\\Dev\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Willian Hora",
+            "email": "willianhora@ledebian.debian13.hora"
+        }
+    ],
+    "require": {}
+}
