@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(235, 235, 235);
+    display: flex; /* Volta para o layout original */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-box {
+    background: #ffffff;
+    padding: 30px 35px; /* Padding interno */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    width: 650px; 
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    /* Nenhuma margem extra aqui, o padding já resolve */
+}
+
+/* Estilos para o Cabeçalho de Admin DENTRO do form-box */
+.admin-header {
+    /* Remove padding e background aqui, pois o form-box já tem */
+    padding: 0; 
+    background: none; 
+    box-shadow: none; /* Remove a sombra extra, pois o form-box já tem */
+    
+    width: 100%; /* Ocupa 100% da largura do pai (.form-box) */
+    margin-bottom: 25px; /* Espaçamento abaixo do header, antes do h2 */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee; /* Linha divisória */
+    padding-bottom: 15px; /* Espaço entre a linha e o conteúdo do header */
+    
+    box-sizing: border-box;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.admin-header .welcome-msg {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    flex-grow: 1; 
+}
+
+.admin-header .welcome-msg .user-name {
+    color: #007bff;
+}
+
+.admin-header .logout-link {
+    text-decoration: none;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+}
+
+.admin-header .logout-link:hover {
+    background-color: #c82333;
+}
+
+
+.form-box h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea { 
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #28a745;
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+}
+
+.separator {
+    border-bottom: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+.mensagem-sucesso {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mensagem-erro {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+    .form-box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 10px; /* Ajusta padding para telas menores */
+    }
+
+    .admin-header .welcome-msg {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .admin-header .logout-link {
+        width: 100%;
+        text-align: center;
+    }
+}

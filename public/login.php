@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_PO
     $email = $_POST['email'];
     $senha_plana = $_POST['senha']; 
 
-    $sql = "SELECT id, email, senha FROM usuarios WHERE email = :email";
+    $sql = "SELECT id, nome, email, senha FROM usuarios WHERE email = :email";
     $stmt = $db->prepare($sql);
     $stmt->execute([':email' => $email]);
     
@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_PO
         
         session_regenerate_id(true);
         $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_email'] = $user['email'];
+        $_SESSION['usuario_nome'] = $user['nome'];
+        $_SESSION['usuario_email'] = $user['email'];
         $_SESSION['logged_in'] = true;
 
    
@@ -36,3 +37,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_PO
     header("Location: index.php");
     exit;
 }
+?>
