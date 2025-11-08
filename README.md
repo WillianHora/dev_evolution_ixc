@@ -1,9 +1,3 @@
-Com certeza\! Baseado em tudo que configuramos, aqui está um `README.md` completo.
-
-Você pode criar um arquivo chamado `README.md` na raiz do seu projeto (`dev_evolution/`) e colar o conteúdo abaixo.
-
------
-
 # 📦 Projeto de Loja PHP/SQLite (Dockerizado)
 
 Este é um sistema simples de gerenciamento de produtos e vendas, totalmente containerizado com Docker.
