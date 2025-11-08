@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+
+    container_name: meu-projeto-loja
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - app_db_data:/var/www/html/src/database
+
+volumes:
+  app_db_data:
