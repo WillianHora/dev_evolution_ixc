@@ -1,0 +1,173 @@
+/* Estilo base (pode reutilizar o 'body' do seu painel.css) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(235, 235, 235);
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho de Admin (Reutilizado) */
+.admin-header {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.admin-header .welcome-msg {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.admin-header .welcome-msg .user-name {
+    color: #007bff;
+}
+.admin-header .logout-link,
+.admin-header .btn-link {
+    text-decoration: none;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+.admin-header .btn-link {
+    background-color: #6c757d;
+}
+.admin-header .logout-link:hover {
+    background-color: #c82333;
+}
+.admin-header .btn-link:hover {
+    background-color: #5a6268;
+}
+
+.container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grade de Produtos */
+.product-grid {
+    display: grid;
+    /* Cria colunas flexíveis, min de 250px, max de 1fr (espaço igual) */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* Espaço entre os cards */
+}
+
+/* Card de Produto Individual */
+.product-card {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+.product-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.product-card .descricao {
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1; /* Faz a descrição ocupar o espaço disponível, alinhando os botões */
+    margin-bottom: 15px;
+}
+
+.product-card .preco {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+.product-card .estoque {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+/* Formulário de Compra dentro do Card */
+.form-group-compra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group-compra label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form-group-compra input {
+    width: 70px; /* Largura do campo quantidade */
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.btn-comprar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #0056b3;
+}
+
+/* Mensagens de feedback */
+.mensagem-erro {
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.mensagem-sucesso {
+    color: #28a745;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.sem-produtos {
+    font-size: 1.1em;
+    color: #555;
+    padding: 20px;
+    text-align: center;
+}

@@ -207,3 +207,52 @@ body {
         box-sizing: border-box;
     }
 }
+
+
+/* --- ADICIONAR AO style/painel.css --- */
+
+/* Estilos para os links de navegação no cabeçalho */
+.admin-header .btn-link-nav {
+    text-decoration: none;
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+.admin-header .btn-link-nav.btn-loja {
+    background-color: #007bff;
+}
+
+.admin-header .btn-link-nav:hover {
+    background-color: #5a6268;
+}
+.admin-header .btn-link-nav.btn-loja:hover {
+    background-color: #0056b3;
+}
+
+
+.resumo-vendas {
+    background: #f4f8ff;
+    border: 1px solid #cce5ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.resumo-vendas h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #004085;
+}
+.resumo-vendas p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 5px 0;
+}
+.resumo-vendas p span {
+    font-weight: bold;
+    color: #0056b3;
+}
