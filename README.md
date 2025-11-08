@@ -44,6 +44,13 @@ Com o Docker e o Docker Compose instalados, siga os passos abaixo.
       * **Login (Vendedor):** [http://localhost:8080/index.php](https://www.google.com/search?q=http://localhost:8080/index.php)
       * **Loja (Vitrine Pública):** [http://localhost:8080/loja.php](https://www.google.com/search?q=http://localhost:8080/loja.php)
 
+
+4. **Rodando fora de container**
+   ```bash
+    cd dev_evolution_ixc
+    cd public
+    php -S localhost:8080
+    ```
 -----
 
 ### Comandos Úteis do Docker
@@ -98,3 +105,7 @@ Com o Docker e o Docker Compose instalados, siga os passos abaixo.
 O arquivo `docker-compose.yml` cria um **volume nomeado** (`app_db_data`). Isso garante que seu arquivo `sqlite.db` (com todos os produtos, vendas e usuários) seja salvo fora do contêiner.
 
 **Isso significa que você pode parar, remover ou recriar o contêiner (`docker compose down`) sem perder nenhum dado do banco.**
+
+
+
+
