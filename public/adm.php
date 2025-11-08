@@ -6,6 +6,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 }
 
 $nome_usuario = $_SESSION['usuario_nome'] ?? $_SESSION['usuario_email'] ?? 'Usu√°rio';
+
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +37,7 @@ $nome_usuario = $_SESSION['usuario_nome'] ?? $_SESSION['usuario_email'] ?? 'Usu√
         </a>
 
         <a href="listar_produtos.php" class="btn btn-secondary">
-            Ver Produtos Cadastrados
+            Ver Meus Produtos Cadastrados
         </a>
         <a href="minhas_vendas.php" class="btn btn-thrid">
            Minhas vendas

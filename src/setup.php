@@ -15,7 +15,7 @@ $sql_usuario = "CREATE TABLE IF NOT EXISTS usuarios (
 $sql_produtos = "CREATE TABLE IF NOT EXISTS produtos (
     id INTEGER PRIMARY KEY ,
     nome TEXT NOT NULL,
-    descricao TEXT UNIQUE NOT NULL,
+    descricao TEXT NOT NULL,
     quantidade TEXT NOT NULL ,
     valor DECIMAL NOT NULL,
     id_usuario INTEGER NOT NULL
